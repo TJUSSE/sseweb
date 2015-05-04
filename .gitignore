@@ -5,6 +5,9 @@ sites/*/*settings*.php
 files/
 sites/*/files
 sites/*/private
+sites/all
+sites/README.txt
+sites/example.sites.php
 
 # Ignore default text files
 robots.txt

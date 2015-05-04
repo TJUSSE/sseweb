@@ -1,0 +1,3 @@
+[submodule "sites/default/themes/sse"]
+	path = sites/default/themes/sse
+	url = https://github.com/TJUSSE/ssetheme
