@@ -1,0 +1,14 @@
+--- a/term_reference_tree.widget.inc
++++ b/term_reference_tree.widget.inc
+@@ -286,9 +286,10 @@ function term_reference_tree_process_checkbox_tree($element, $form_state) {
+       if ($element['#max_choices'] == 1 && !$required) {
+         array_unshift($element['#options_tree'], (object) array(
+           'tid' => '',
+-          'name' => 'N/A',
++          'name' => t('N/A'),
+           'depth' => 0,
+           'vocabulary_machine_name' => $element['#vocabulary']->machine_name,
++          'children' => array(),
+         ));
+       }
+       $element['#options'] = _term_reference_tree_get_options($element['#options_tree'], $allowed, $element['#filter_view']);

@@ -66,6 +66,16 @@ drush dl date i18n variable backup_migrate jquery_update fences ctools pathauto 
 drush en variable backup_migrate jquery_update date_api date date_views fences adminimal_admin_menu ctools page_manager pathauto token panels ckeditor views views_ui term_reference_tree menu_fields -y
 ```
 
+### Patch
+
+某些插件有兼容性问题，有补丁可以修复但并没有合并到插件代码库中，因此需要手工打补丁。
+
+```bash
+# cd sseweb
+patch sites/all/modules/term_reference_tree/term_reference_tree.module patches/term_reference_tree.module.patch
+patch sites/all/modules/term_reference_tree/term_reference_tree.widget.inc patches/term_reference_tree.widget.inc.patch
+```
+
 ### 编译 SSE 主题
 
 具体参见 https://github.com/TJUSSE/ssetheme/tree/0.0.2
