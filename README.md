@@ -56,14 +56,14 @@ git submodule update --init --recursive
 
 ```bash
 # cd sseweb
-drush dl date i18n variable backup_migrate jquery_update fences ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu
+drush dl devel globalredirect rabbit_hole date i18n variable backup_migrate jquery_update fences ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu
 ```
 
 启用插件：
 
 ```bash
 # cd sseweb
-drush en variable backup_migrate jquery_update date_api date date_views fences adminimal_admin_menu ctools page_manager pathauto token panels ckeditor views views_ui term_reference_tree menu_fields -y
+drush en ssetaxonomy globalredirect rh_taxonomy variable backup_migrate jquery_update date_api date date_views fences adminimal_admin_menu ctools page_manager pathauto token panels ckeditor views views_ui term_reference_tree menu_fields -y
 ```
 
 ### Patch
@@ -102,9 +102,13 @@ gulp
 
 ## 插件说明
 
+- [ssetaxonomy](https://github.com/TJUSSE/ssetaxonomy): 修复 Taxonomy 地址
+- [devel](https://www.drupal.org/project/devel): 调试工具
 - [date](https://www.drupal.org/project/date): 提供日期时间类型的字段
+- [rabbit_hole](https://www.drupal.org/project/rabbit_hole): 控制节点 / Taxonomy 的可访问性 / 重定向
+- [globalredirect](https://www.drupal.org/project/globalredirect): `node/xx` 重定向到其 alias 等
 - [fences](https://www.drupal.org/project/fences): 为字段提供更简单和更语义化的 HTML 输出
-- [pathauto](https://www.drupal.org/project/pathauto): 自动生成可访问的 URI
+- [pathauto](https://www.drupal.org/project/pathauto): 自动按规则生成 URI alias
 - [token](https://www.drupal.org/project/token): 提供 Placeholder 接口
 - [panels](https://www.drupal.org/project/panels): 自由布局
 - [ckeditor](https://www.drupal.org/project/ckeditor): 富文本编辑
@@ -115,8 +119,8 @@ gulp
 - [ctools](https://www.drupal.org/project/ctools): Chaos tool suite，包含 page_manager 等，Panels 所需模块
 - [i18n](https://www.drupal.org/project/i18n): 国际化，为内容编写中英文版本
 - [variable](https://www.drupal.org/project/variable): I18N 所需模块
-- [jquery_update](https://www.drupal.org/project/jquery_update)：更新 jQuery 版本
-- [backup_migrate](https://www.drupal.org/project/backup_migrate)：备份迁移工具
+- [jquery_update](https://www.drupal.org/project/jquery_update): 更新 jQuery 版本
+- [backup_migrate](https://www.drupal.org/project/backup_migrate): 备份迁移工具
 
 ## License
 

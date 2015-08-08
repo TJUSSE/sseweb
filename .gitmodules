@@ -1,3 +1,6 @@
 [submodule "sites/default/themes/sse"]
 	path = sites/default/themes/sse
 	url = https://github.com/TJUSSE/ssetheme
+[submodule "sites/default/modules/ssetaxonomy"]
+	path = sites/default/modules/ssetaxonomy
+	url = https://github.com/TJUSSE/ssetaxonomy
