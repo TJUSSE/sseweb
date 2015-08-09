@@ -10,7 +10,7 @@
 
 ## 如何从本仓库开始开发
 
-### 安装 drush
+### 1. 安装 drush
 
 ```bash
 composer global require drush/drush:dev-master -vvv --profile
@@ -18,7 +18,7 @@ composer global require drush/drush:dev-master -vvv --profile
 
 具体参见 http://docs.drush.org/en/master/install/
 
-### 下载 drupal 并 clone 本仓库
+### 2. 下载 Drupal 并 clone 本仓库
 
 ```bash
 drush dl drupal --drupal-project-rename=sseweb
@@ -46,37 +46,47 @@ git submodule update --init --recursive
 </Directory>
 ```
 
-### 初始化
+### 3. 初始化 Drupal
 
 访问相应地址，如 `http://ssedev.tongji.edu.cn`。以默认英文初始化即可。
 
-### 配置插件和管理主题
-
-下载：
+### 4. 下载插件
 
 ```bash
 # cd sseweb
-drush dl devel globalredirect rabbit_hole date i18n variable backup_migrate jquery_update fences ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu
+drush dl imagemagick devel globalredirect rabbit_hole date i18n variable backup_migrate jquery_update fences ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu
 ```
 
-启用插件：
+### 5. Patch
+
+某些插件有兼容性问题，或需要增加新功能，需要手工打补丁。
+
+Patch 1. 修复 term_reference_tree 和 I18N 插件的兼容性问题
 
 ```bash
 # cd sseweb
-drush en ssetaxonomy globalredirect rh_taxonomy variable backup_migrate jquery_update date_api date date_views fences adminimal_admin_menu ctools page_manager pathauto token panels ckeditor views views_ui term_reference_tree menu_fields -y
+patch sites/all/modules/term_reference_tree/term_reference_tree.module < patches/term_reference_tree.module.patch
+patch sites/all/modules/term_reference_tree/term_reference_tree.widget.inc < patches/term_reference_tree.widget.inc.patch
 ```
 
-### Patch
-
-某些插件有兼容性问题，有补丁可以修复但并没有合并到插件代码库中，因此需要手工打补丁。
+Patch 2. 为 ImageMagick 插件提供生成渐进式图像的选项。载入此类图像时，会先显示模糊的图片再逐渐变清晰
 
 ```bash
 # cd sseweb
-patch sites/all/modules/term_reference_tree/term_reference_tree.module patches/term_reference_tree.module.patch
-patch sites/all/modules/term_reference_tree/term_reference_tree.widget.inc patches/term_reference_tree.widget.inc.patch
+patch sites/all/modules/imagemagick/imagemagick_advanced/imagemagick_advanced.install < patches/imagemagick_advanced.install.patch
+patch sites/all/modules/imagemagick/imagemagick_advanced/imagemagick_advanced.module < patches/imagemagick_advanced.module.patch
 ```
 
-### 编译 SSE 主题
+### 6. 启用插件
+
+```bash
+# cd sseweb
+drush en imagemagick_advanced devel ssetaxonomy globalredirect rh_taxonomy variable backup_migrate jquery_update date_api date date_views fences adminimal_admin_menu ctools page_manager pathauto token panels ckeditor views views_ui term_reference_tree menu_fields -y
+```
+
+各个插件用途见下文。
+
+### 7. 编译 SSE 主题
 
 具体参见 https://github.com/TJUSSE/ssetheme/tree/0.0.2
 
@@ -86,15 +96,29 @@ npm install  # 如果安装了 cnpm，则使用 cnpm install
 gulp
 ```
 
-### 导入基础数据库镜像
+### 8. 导入基础数据库镜像
 
 数据库中包含了设置、菜单项、节点项等信息。该数据库是调试数据库，不包含线上数据。
 
-1. 访问 http://pan.baidu.com/s/1pJpB0yn 下载获得 `2015-08-07T12-13-40.mysql.gz`
+1. 访问 http://pan.baidu.com/s/1i3Cizbf 下载最新的数据库快照。
 
-2. 访问 http://ssedev.tongji.edu.cn/admin/config/system/backup_migrate/restore ，点击「Restore from an uploaded file」，选择刚才下载下来的 `2015-08-07T12-13-40.mysql.gz`。其中 `http://ssedev.tongji.edu.cn` 是 Drupal 访问路径，请按照自己的配置进行修改。
+2. 访问 http://ssedev.tongji.edu.cn/admin/config/system/backup_migrate/restore ，点击「Restore from an uploaded file」，选择刚才下载下来的 `.mysql.gz` 快照文件。其中 `http://ssedev.tongji.edu.cn` 是 Drupal 访问路径，请按照自己的配置进行修改。
 
-3. 点击 「Restore Now」
+3. 点击 「Restore Now」。
+
+### 9. 配置 ImageMagick
+
+网站使用了 ImageMagick 来处理上传的图片。
+
+请在本地安装 ImageMagick 二进制，然后访问 `/zh-CN/admin/config/media/image-toolkit` 地址配置路径。
+
+## 如何升级部署
+
+1. `git pull`
+
+2. `git submodule foreach git pull`
+
+3. 从上文「下载插件」开始
 
 ## 提出建议
 
@@ -103,6 +127,7 @@ gulp
 ## 插件说明
 
 - [ssetaxonomy](https://github.com/TJUSSE/ssetaxonomy): 修复 Taxonomy 地址
+- [imagemagick](https://www.drupal.org/project/imagemagick): 使用 imagemagick 处理图片
 - [devel](https://www.drupal.org/project/devel): 调试工具
 - [date](https://www.drupal.org/project/date): 提供日期时间类型的字段
 - [rabbit_hole](https://www.drupal.org/project/rabbit_hole): 控制节点 / Taxonomy 的可访问性 / 重定向

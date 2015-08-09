@@ -1,0 +1,9 @@
+--- a/imagemagick_advanced/imagemagick_advanced.install
++++ b/imagemagick_advanced/imagemagick_advanced.install
+@@ -12,5 +12,6 @@ function imagemagick_advanced_uninstall() {
+   variable_del('imagemagick_advanced_density');
+   variable_del('imagemagick_advanced_colorspace');
+   variable_del('imagemagick_advanced_profile');
++  variable_del('imagemagick_advanced_interlace');
+ }
+ 

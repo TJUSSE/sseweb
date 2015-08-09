@@ -1,0 +1,51 @@
+--- a/imagemagick_advanced/imagemagick_advanced.module
++++ b/imagemagick_advanced/imagemagick_advanced.module
+@@ -52,12 +52,37 @@ function imagemagick_advanced_form_system_image_toolkit_settings_alter(&$form, &
+       '@color-url' => 'http://www.color.org/profiles.html',
+     )),
+   );
++  $im_form['imagemagick_advanced_interlace'] = array(
++    '#type' => 'select',
++    '#title' => t('Interlacing method'),
++    '#default_value' => variable_get('imagemagick_advanced_interlace', 0),
++    '#options' => array(
++      'line' => 'Line',
++      'plane' => 'Plane',
++    ),
++    '#empty_option' => t('- None -'),
++    '#empty_value' => 0,
++    '#description' => t('Specify the type of <a href="@help-url">interlacing</a> scheme. Use <strong>Line</strong>, or <strong>Plane</strong> to create an interlaced GIF or progressive JPEG image.', array(
++      '@help-url' => 'http://en.wikipedia.org/wiki/Interlacing_%28bitmaps%29',
++    )),
++  );
+ }
+ 
+ /**
+  * Implements hook_imagemagick_arguments_alter().
+  */
+ function imagemagick_advanced_imagemagick_arguments_alter(&$args, $context) {
++  $file = NULL;
++  if (isset($context['source_original'])) {
++    $q = new EntityFieldQuery();
++    $res = $q->entityCondition('entity_type', 'file')
++      ->propertyCondition('uri', $context['source_original'])
++      ->execute();
++    if (!empty($res['file'])) {
++      $file = reset($res['file']);
++      $file = file_load($file->fid);
++    }
++  }
+   // Change image density.
+   if ($density = (int) variable_get('imagemagick_advanced_density', 0)) {
+     $args['density'] = "-density {$density} -units PixelsPerInch";
+@@ -75,6 +100,10 @@ function imagemagick_advanced_imagemagick_arguments_alter(&$args, $context) {
+       $args['colorspace'] = '-colorspace ' . escapeshellarg($colorspace);
+     }
+   }
++  // Use interlace option.
++  if ((!isset($file->filemime) || $file->filemime != 'image/gif') && $interlace = variable_get('imagemagick_advanced_interlace', 0)) {
++    $args['interlace'] = "-interlace {$interlace}";
++  }
+ }
+ 
+ /**
