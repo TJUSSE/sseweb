@@ -147,6 +147,12 @@ gulp
 - [jquery_update](https://www.drupal.org/project/jquery_update): 更新 jQuery 版本
 - [backup_migrate](https://www.drupal.org/project/backup_migrate): 备份迁移工具
 
+## CDN
+
+为了方便检查第三方服务可用性，在这里列出该项目所用到的 CDN 服务。选择 CDN 服务的原则是支持 https 访问。
+
+- CKEditor 使用七牛云 staticfile.org 提供的 HTTPS CDN：https://dn-staticfile.qbox.me/ckeditor/4.4.5/ckeditor.js ；项目中该地址配置路径为 admin/config/content/ckeditor/editg
+
 ## License
 
 MIT
