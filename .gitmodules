@@ -1,6 +1,9 @@
 [submodule "sites/default/themes/sse"]
-	path = sites/default/themes/sse
-	url = https://github.com/TJUSSE/ssetheme
+  path = sites/default/themes/sse
+  url = https://github.com/TJUSSE/sseweb-theme
 [submodule "sites/default/modules/ssetaxonomy"]
-	path = sites/default/modules/ssetaxonomy
-	url = https://github.com/TJUSSE/ssetaxonomy
+  path = sites/default/modules/ssetaxonomy
+  url = https://github.com/TJUSSE/sseweb-fixtaxonomy
+[submodule "profiles/sseweb"]
+	path = profiles/sseweb
+	url = https://github.com/TJUSSE/sseweb-profile
