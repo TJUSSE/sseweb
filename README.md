@@ -126,6 +126,7 @@ gulp
 - [views](https://www.drupal.org/project/views): Views
 - [term_reference_tree](https://www.drupal.org/project/term_reference_tree): 高级树形词汇表选项
 - [menu_fields](https://www.drupal.org/project/menu_fields): 允许菜单项中增加字段
+- [menu_force](https://www.drupal.org/project/menu_force): 强制勾选「使用菜单」
 - [adminimal_admin_menu](https://www.drupal.org/project/adminimal_admin_menu): 与 Adminimal 主题配合的后台菜单
 - [i18n](https://www.drupal.org/project/i18n): 国际化，为内容编写中英文版本
 - [jquery_update](https://www.drupal.org/project/jquery_update): 更新 jQuery 版本
