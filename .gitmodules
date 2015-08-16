@@ -7,3 +7,12 @@
 [submodule "profiles/sseweb"]
 	path = profiles/sseweb
 	url = https://github.com/TJUSSE/sseweb-profile
+[submodule "sites/default/modules/ssemark"]
+	path = sites/default/modules/ssemark
+	url = https://github.com/TJUSSE/sseweb-mark
+[submodule "sites/default/modules/ckeditor"]
+	path = sites/default/modules/ckeditor
+	url = https://github.com/TJUSSE/sseweb-ckeditor
+[submodule "sites/default/libraries/ckeditor"]
+	path = sites/default/libraries/ckeditor
+	url = https://github.com/TJUSSE/sseweb-ckeditor
