@@ -35,7 +35,7 @@ git submodule update --init --recursive
 
 ```bash
 # cd sseweb
-drush dl imagemagick devel globalredirect rabbit_hole date i18n variable backup_migrate jquery_update ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu admin_menu entity libraries l10n_update
+drush dl insert_block imagemagick devel globalredirect rabbit_hole date i18n variable backup_migrate jquery_update ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu admin_menu entity libraries l10n_update
 ```
 
 ### 4. Patch
@@ -112,6 +112,7 @@ gulp
 ## 插件说明
 
 - [ssetaxonomy](https://github.com/TJUSSE/ssetaxonomy): 修复 Taxonomy 地址
+- [insert_block](https://www.drupal.org/project/insert_block): 直接在 node 中插入 block
 - [imagemagick](https://www.drupal.org/project/imagemagick): 使用 imagemagick 处理图片
 - [devel](https://www.drupal.org/project/devel): 调试工具
 - [date](https://www.drupal.org/project/date): 提供日期时间类型的字段
