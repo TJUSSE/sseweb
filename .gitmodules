@@ -16,3 +16,6 @@
 [submodule "sites/default/libraries/ckeditor"]
 	path = sites/default/libraries/ckeditor
 	url = https://github.com/TJUSSE/sseweb-ckeditor
+[submodule "sites/default/modules/sseadmintype"]
+	path = sites/default/modules/sseadmintype
+	url = https://github.com/TJUSSE/sseweb-admin-type
