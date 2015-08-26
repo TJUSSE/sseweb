@@ -35,7 +35,7 @@ git submodule update --init --recursive
 
 ```bash
 # cd sseweb
-drush dl link module_filter admin_views views_bulk_operations ckeditor_blocks-7.x-1.x-dev insert_block imagemagick devel globalredirect rabbit_hole date i18n variable backup_migrate jquery_update ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu admin_menu entity libraries l10n_update
+drush dl field_group link module_filter admin_views views_bulk_operations ckeditor_blocks-7.x-1.x-dev insert_block imagemagick devel globalredirect rabbit_hole date i18n variable backup_migrate jquery_update ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu admin_menu entity libraries l10n_update
 ```
 
 ### 4. Patch
@@ -118,6 +118,7 @@ gulp
 - [ckeditor_blocks](https://www.drupal.org/project/ckeditor_blocks): 在编辑器中可以选择 block 插入
 - [date](https://www.drupal.org/project/date): 提供日期时间类型的字段
 - [devel](https://www.drupal.org/project/devel): 调试工具
+- [field_group](https://www.drupal.org/project/field_group): 对字段分组
 - [globalredirect](https://www.drupal.org/project/globalredirect): `node/xx` 重定向到其 alias 等
 - [i18n](https://www.drupal.org/project/i18n): 国际化，为内容编写中英文版本
 - [imagemagick](https://www.drupal.org/project/imagemagick): 使用 imagemagick 处理图片

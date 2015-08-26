@@ -19,3 +19,6 @@
 [submodule "sites/default/modules/sseadmintype"]
 	path = sites/default/modules/sseadmintype
 	url = https://github.com/TJUSSE/sseweb-admin-type
+[submodule "sites/default/modules/ssecontactfield"]
+	path = sites/default/modules/ssecontactfield
+	url = https://github.com/TJUSSE/sseweb-contactfield
