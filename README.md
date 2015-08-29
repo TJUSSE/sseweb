@@ -35,7 +35,7 @@ git submodule update --init --recursive
 
 ```bash
 # cd sseweb
-drush dl field_group link module_filter admin_views views_bulk_operations ckeditor_blocks-7.x-1.x-dev insert_block imagemagick devel globalredirect rabbit_hole date i18n variable backup_migrate jquery_update ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu admin_menu entity libraries l10n_update
+drush dl filefield_sources imce conditional_fields field_group link module_filter admin_views views_bulk_operations ckeditor_blocks-7.x-1.x-dev insert_block imagemagick devel globalredirect rabbit_hole date i18n variable backup_migrate jquery_update ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu admin_menu entity libraries l10n_update
 ```
 
 ### 4. Patch
@@ -116,12 +116,15 @@ gulp
 - [backup_migrate](https://www.drupal.org/project/backup_migrate): 备份迁移工具
 - [ckeditor](https://www.drupal.org/project/ckeditor): 富文本编辑
 - [ckeditor_blocks](https://www.drupal.org/project/ckeditor_blocks): 在编辑器中可以选择 block 插入
+- [conditional_fields](https://www.drupal.org/project/conditional_fields): 条件字段
 - [date](https://www.drupal.org/project/date): 提供日期时间类型的字段
 - [devel](https://www.drupal.org/project/devel): 调试工具
 - [field_group](https://www.drupal.org/project/field_group): 对字段分组
+- [filefield_sources](https://www.drupal.com/project/filefield_sources): 集成 IMCE 到内置字段
 - [globalredirect](https://www.drupal.org/project/globalredirect): `node/xx` 重定向到其 alias 等
 - [i18n](https://www.drupal.org/project/i18n): 国际化，为内容编写中英文版本
 - [imagemagick](https://www.drupal.org/project/imagemagick): 使用 imagemagick 处理图片
+- [imce](https://www.drupal.com/project/imce): 文件和图片管理
 - [jquery_update](https://www.drupal.org/project/jquery_update): 更新 jQuery 版本
 - [link](https://www.drupal.org/project/link): 超链接字段
 - [menu_fields](https://www.drupal.org/project/menu_fields): 允许菜单项中增加字段
@@ -130,6 +133,8 @@ gulp
 - [panels](https://www.drupal.org/project/panels): 自由布局
 - [pathauto](https://www.drupal.org/project/pathauto): 自动按规则生成 URI alias
 - [rabbit_hole](https://www.drupal.org/project/rabbit_hole): 控制节点 / Taxonomy 的可访问性 / 重定向
+- [sseadmintype](https://github.com/TJUSSE/sseweb-admin-type): 为各个节点类型显示管理菜单
+- [ssecontactfield](https://github.com/TJUSSE/sseweb-contactfield): 联系方式字段
 - [ssemark](https://github.com/TJUSSE/sseweb-mark): 在编辑器中添加高亮内容按钮
 - [ssetaxonomy](https://github.com/TJUSSE/sseweb-fixtaxonomy): 修复 Taxonomy 地址
 - [term_reference_tree](https://www.drupal.org/project/term_reference_tree): 高级树形词汇表选项
