@@ -35,7 +35,20 @@ git submodule update --init --recursive
 
 ```bash
 # cd sseweb
-drush dl filefield_sources imce conditional_fields field_group link module_filter admin_views views_bulk_operations ckeditor_blocks-7.x-1.x-dev insert_block imagemagick devel globalredirect rabbit_hole date i18n variable backup_migrate jquery_update ctools pathauto token panels ckeditor views term_reference_tree menu_fields zen adminimal_theme adminimal_admin_menu admin_menu entity libraries l10n_update
+drush dl workbench workbench_moderation \
+linkit entityreference \
+advanced_help image_url_formatter \
+filefield_sources imce \
+conditional_fields field_group link \
+module_filter admin_views views_bulk_operations \
+ckeditor_blocks-7.x-1.x-dev insert_block \
+imagemagick devel globalredirect \
+rabbit_hole date i18n variable \
+backup_migrate jquery_update ctools \
+pathauto token panels ckeditor views \
+term_reference_tree menu_fields zen \
+adminimal_theme adminimal_admin_menu admin_menu \
+entity libraries l10n_update
 ```
 
 ### 4. Patch
@@ -95,7 +108,7 @@ gulp
 
 1. 访问 http://pan.baidu.com/s/1i3Cizbf 下载最新的数据库快照。
 
-2. 访问 http://ssedev.tongji.edu.cn/admin/config/system/backup_migrate/restore ，点击「Restore from an uploaded file」，选择刚才下载下来的 `.mysql.gz` 快照文件。其中 `http://ssedev.tongji.edu.cn` 是 Drupal 访问路径，请按照自己的配置进行修改。
+2. 访问 http://ssedev.tongji.edu.cn/admin/config/system/backup_migrate/restore ，点击「Restore from an uploaded file」，选择刚才下载下来的 `.mysql.zip` 快照文件。其中 `http://ssedev.tongji.edu.cn` 是 Drupal 访问路径，请按照自己的配置进行修改。
 
 3. 点击 「Restore Now」。
 
@@ -111,41 +124,40 @@ gulp
 
 ## 插件说明
 
-- [admin_views](https://www.drupal.org/project/admin_views): 提供更好的管理界面
-- [adminimal_admin_menu](https://www.drupal.org/project/adminimal_admin_menu): 与 Adminimal 主题配合的后台菜单
-- [backup_migrate](https://www.drupal.org/project/backup_migrate): 备份迁移工具
+- [admin\_views](https://www.drupal.org/project/admin_views): 提供更好的管理界面
+- [adminimal\_admin\_menu](https://www.drupal.org/project/adminimal_admin_menu): 与 Adminimal 主题配合的后台菜单
+- [advanced\_help](https://www.drupal.org/project/advanced_help): 更好的帮助信息
+- [backup\_migrate](https://www.drupal.org/project/backup_migrate): 备份迁移工具
 - [ckeditor](https://www.drupal.org/project/ckeditor): 富文本编辑
-- [ckeditor_blocks](https://www.drupal.org/project/ckeditor_blocks): 在编辑器中可以选择 block 插入
-- [conditional_fields](https://www.drupal.org/project/conditional_fields): 条件字段
+- [ckeditor\_blocks](https://www.drupal.org/project/ckeditor_blocks): 在编辑器中可以选择 block 插入
+- [conditional\_fields](https://www.drupal.org/project/conditional_fields): 条件字段
 - [date](https://www.drupal.org/project/date): 提供日期时间类型的字段
 - [devel](https://www.drupal.org/project/devel): 调试工具
-- [field_group](https://www.drupal.org/project/field_group): 对字段分组
-- [filefield_sources](https://www.drupal.com/project/filefield_sources): 集成 IMCE 到内置字段
+- [entityreference](https://www.drupal.org/project/entityreference): 可引用的字段
+- [field\_group](https://www.drupal.org/project/field_group): 对字段分组
+- [filefield\_sources](https://www.drupal.com/project/filefield_sources): 集成 IMCE 到内置字段
 - [globalredirect](https://www.drupal.org/project/globalredirect): `node/xx` 重定向到其 alias 等
 - [i18n](https://www.drupal.org/project/i18n): 国际化，为内容编写中英文版本
 - [imagemagick](https://www.drupal.org/project/imagemagick): 使用 imagemagick 处理图片
+- [image\_url\_formatter](https://www.drupal.org/project/image_url_formatter): 提供图像链接格式化器
 - [imce](https://www.drupal.com/project/imce): 文件和图片管理
 - [jquery_update](https://www.drupal.org/project/jquery_update): 更新 jQuery 版本
 - [link](https://www.drupal.org/project/link): 超链接字段
-- [menu_fields](https://www.drupal.org/project/menu_fields): 允许菜单项中增加字段
-- [menu_force](https://www.drupal.org/project/menu_force): 强制勾选「使用菜单」
-- [module_filter](https://www.drupal.org/project/module_filter): 在模块页面提供筛选功能
+- [linkit](https://www.drupal.org/project/linkit): 选择内部或外部链接
+- [menu\_fields](https://www.drupal.org/project/menu_fields): 允许菜单项中增加字段
+- [menu\_force](https://www.drupal.org/project/menu_force): 强制勾选「使用菜单」
+- [module\_filter](https://www.drupal.org/project/module_filter): 在模块页面提供筛选功能
 - [panels](https://www.drupal.org/project/panels): 自由布局
 - [pathauto](https://www.drupal.org/project/pathauto): 自动按规则生成 URI alias
-- [rabbit_hole](https://www.drupal.org/project/rabbit_hole): 控制节点 / Taxonomy 的可访问性 / 重定向
+- [rabbit\_hole](https://www.drupal.org/project/rabbit_hole): 控制节点 / Taxonomy 的可访问性 / 重定向
 - [sseadmintype](https://github.com/TJUSSE/sseweb-admin-type): 为各个节点类型显示管理菜单
 - [ssecontactfield](https://github.com/TJUSSE/sseweb-contactfield): 联系方式字段
 - [ssemark](https://github.com/TJUSSE/sseweb-mark): 在编辑器中添加高亮内容按钮
 - [ssetaxonomy](https://github.com/TJUSSE/sseweb-fixtaxonomy): 修复 Taxonomy 地址
-- [term_reference_tree](https://www.drupal.org/project/term_reference_tree): 高级树形词汇表选项
+- [term\_reference\_tree](https://www.drupal.org/project/term_reference_tree): 高级树形词汇表选项
 - [token](https://www.drupal.org/project/token): 提供 Placeholder 接口
 - [views](https://www.drupal.org/project/views): Views
-
-## CDN
-
-为了方便检查第三方服务可用性，在这里列出该项目所用到的 CDN 服务。选择 CDN 服务的原则是支持 https 访问。
-
-- CKEditor 使用七牛云 staticfile.org 提供的 HTTPS CDN：https://dn-staticfile.qbox.me/ckeditor/4.4.5/ckeditor.js ；项目中该地址配置路径为 admin/config/content/ckeditor/editg
+- [workbench](https://www.drupal.org/project/workbench): 草稿审核等
 
 ## License
 
