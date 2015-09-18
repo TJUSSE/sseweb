@@ -41,7 +41,7 @@ boost expire \
 workbench workbench_moderation \
 linkit entityreference \
 advanced_help image_url_formatter \
-filefield_sources imce \
+filefield_sources imce menu_force \
 conditional_fields field_group link \
 module_filter admin_views views_bulk_operations \
 ckeditor_blocks-7.x-1.x-dev insert_block \
@@ -82,6 +82,11 @@ entity libraries l10n_update
 cd sites/default/themes/sse
 npm install  # 如果安装了 cnpm，则使用 cnpm install
 gulp
+# 以下是下载 banner images
+cd img
+mkdir banners && cd banners
+wget http://cdug.tongji.edu.cn/sse/banners.tar.gz
+tar xzf banners.tar.gz
 ```
 
 ### 6. 初始化网站
