@@ -35,7 +35,10 @@ git submodule update --init --recursive
 
 ```bash
 # cd sseweb
-drush dl workbench workbench_moderation \
+drush dl \
+ds \
+boost expire \
+workbench workbench_moderation \
 linkit entityreference \
 advanced_help image_url_formatter \
 filefield_sources imce \
@@ -128,12 +131,15 @@ gulp
 - [adminimal\_admin\_menu](https://www.drupal.org/project/adminimal_admin_menu): 与 Adminimal 主题配合的后台菜单
 - [advanced\_help](https://www.drupal.org/project/advanced_help): 更好的帮助信息
 - [backup\_migrate](https://www.drupal.org/project/backup_migrate): 备份迁移工具
+- [boost](https://www.drupal.org/project/boost): Drupal 静态缓存
 - [ckeditor](https://www.drupal.org/project/ckeditor): 富文本编辑
 - [ckeditor\_blocks](https://www.drupal.org/project/ckeditor_blocks): 在编辑器中可以选择 block 插入
 - [conditional\_fields](https://www.drupal.org/project/conditional_fields): 条件字段
 - [date](https://www.drupal.org/project/date): 提供日期时间类型的字段
 - [devel](https://www.drupal.org/project/devel): 调试工具
+- [ds](https://www.drupal.org/project/ds): 控制字段显示
 - [entityreference](https://www.drupal.org/project/entityreference): 可引用的字段
+- [expire](https://www.drupal.org/project/expire): 自动过期缓存
 - [field\_group](https://www.drupal.org/project/field_group): 对字段分组
 - [filefield\_sources](https://www.drupal.com/project/filefield_sources): 集成 IMCE 到内置字段
 - [globalredirect](https://www.drupal.org/project/globalredirect): `node/xx` 重定向到其 alias 等
@@ -141,7 +147,7 @@ gulp
 - [imagemagick](https://www.drupal.org/project/imagemagick): 使用 imagemagick 处理图片
 - [image\_url\_formatter](https://www.drupal.org/project/image_url_formatter): 提供图像链接格式化器
 - [imce](https://www.drupal.com/project/imce): 文件和图片管理
-- [jquery_update](https://www.drupal.org/project/jquery_update): 更新 jQuery 版本
+- [jquery\_update](https://www.drupal.org/project/jquery_update): 更新 jQuery 版本
 - [link](https://www.drupal.org/project/link): 超链接字段
 - [linkit](https://www.drupal.org/project/linkit): 选择内部或外部链接
 - [menu\_fields](https://www.drupal.org/project/menu_fields): 允许菜单项中增加字段
