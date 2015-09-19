@@ -18,7 +18,7 @@ composer global require drush/drush:dev-master -vvv --profile
 
 具体参见 http://docs.drush.org/en/master/install/
 
-### 2. 下载 Drupal 7 并 clone 本仓库
+### 2. 下载 Drupal 7 并 clone 本仓库和子仓库
 
 ```bash
 drush dl drupal --drupal-project-rename=sseweb
@@ -74,7 +74,17 @@ entity libraries l10n_update
   patch sites/all/modules/imagemagick/imagemagick_advanced/imagemagick_advanced.module < patches/imagemagick_advanced.module.patch
   ```
 
-### 5. 编译 SSE 主题
+### 5. 为 SSE 订阅插件安装第三方库
+
+具体参见 https://github.com/TJUSSE/sseweb-subscription
+
+```bash
+cd sites/default/modules/sse_subscription
+composer install
+cd -
+```
+
+### 6. 编译 SSE 主题
 
 具体参见 https://github.com/TJUSSE/ssetheme/tree/0.0.2
 
@@ -89,7 +99,7 @@ wget http://cdug.tongji.edu.cn/sse/banners.tar.gz
 tar xzf banners.tar.gz
 ```
 
-### 6. 初始化网站
+### 7. 初始化网站
 
 1. 在初始化之前，您可能还需要配置 Apache 指向 Drupal 目录，例如：
 
@@ -110,7 +120,7 @@ tar xzf banners.tar.gz
 
 3. 选择「SSE」作为 profile 安装。只需要设定数据库链接，并填写初始账户信息即可，其他字段使用默认参数不需要修改。
 
-### 7. 导入基础数据库镜像
+### 8. 导入基础数据库镜像
 
 数据库中包含了设置、菜单项、节点项等信息。该数据库是调试数据库，不包含线上数据。
 
@@ -120,7 +130,7 @@ tar xzf banners.tar.gz
 
 3. 点击 「Restore Now」。
 
-### 8. 配置 ImageMagick
+### 9. 配置 ImageMagick
 
 网站使用了 ImageMagick 来处理上传的图片。
 
