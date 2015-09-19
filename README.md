@@ -36,7 +36,7 @@ git submodule update --init --recursive
 ```bash
 # cd sseweb
 drush dl \
-ds \
+ds login_destination \
 boost expire \
 workbench workbench_moderation \
 linkit entityreference \
@@ -155,6 +155,7 @@ tar xzf banners.tar.gz
 - [jquery\_update](https://www.drupal.org/project/jquery_update): 更新 jQuery 版本
 - [link](https://www.drupal.org/project/link): 超链接字段
 - [linkit](https://www.drupal.org/project/linkit): 选择内部或外部链接
+- [login_destination](https://www.drupal.org/project/login_destination): 登录跳转
 - [menu\_fields](https://www.drupal.org/project/menu_fields): 允许菜单项中增加字段
 - [menu\_force](https://www.drupal.org/project/menu_force): 强制勾选「使用菜单」
 - [module\_filter](https://www.drupal.org/project/module_filter): 在模块页面提供筛选功能
