@@ -93,8 +93,7 @@ cd sites/default/themes/sse
 npm install  # 如果安装了 cnpm，则使用 cnpm install
 gulp
 # 以下是下载 banner images
-cd img
-mkdir banners && cd banners
+cd img/banners
 wget http://cdug.tongji.edu.cn/sse/banners.tar.gz
 tar xzf banners.tar.gz
 ```
