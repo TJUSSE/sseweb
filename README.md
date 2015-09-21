@@ -36,6 +36,7 @@ git submodule update --init --recursive
 ```bash
 # cd sseweb
 drush dl \
+node_save_redirect \
 ds login_destination \
 boost expire \
 workbench workbench_moderation \
@@ -168,6 +169,7 @@ tar xzf banners.tar.gz
 - [menu\_fields](https://www.drupal.org/project/menu_fields): 允许菜单项中增加字段
 - [menu\_force](https://www.drupal.org/project/menu_force): 强制勾选「使用菜单」
 - [module\_filter](https://www.drupal.org/project/module_filter): 在模块页面提供筛选功能
+- [node_save_redirect](https://www.drupal.org/project/node_save_redirect): 保存节点重定向
 - [panels](https://www.drupal.org/project/panels): 自由布局
 - [pathauto](https://www.drupal.org/project/pathauto): 自动按规则生成 URI alias
 - [rabbit\_hole](https://www.drupal.org/project/rabbit_hole): 控制节点 / Taxonomy 的可访问性 / 重定向
