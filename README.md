@@ -47,7 +47,8 @@ conditional_fields field_group link \
 module_filter admin_views views_bulk_operations \
 ckeditor_blocks-7.x-1.x-dev insert_block \
 imagemagick devel globalredirect \
-rabbit_hole date i18n variable \
+entity_translation i18n variable \
+rabbit_hole date \
 backup_migrate jquery_update ctools \
 pathauto token panels ckeditor views \
 term_reference_tree menu_fields zen \
@@ -59,7 +60,7 @@ entity libraries l10n_update
 
 某些插件有兼容性问题，或需要增加新功能，需要手工打补丁。
 
-1. 修复 term_reference_tree 和 I18N 插件的兼容性问题
+1. 修复 term\_reference\_tree 和 I18N 插件的兼容性问题
 
   ```bash
   # cd sseweb
@@ -75,12 +76,25 @@ entity libraries l10n_update
   patch sites/all/modules/imagemagick/imagemagick_advanced/imagemagick_advanced.module < patches/imagemagick_advanced.module.patch
   ```
 
-### 5. 为 SSE 订阅插件安装第三方库
+3. 修复 Entity API 中翻译检测问题
 
-具体参见 https://github.com/TJUSSE/sseweb-subscription
+  ```bash
+  # cd sseweb
+  patch sites/all/modules/entity/includes/entity.property.inc < patches/entity.property.inc.patch
+  ```
+
+### 5. 为 SSE 订阅插件和 SSE 登录插件安装第三方库
+
+具体参见 https://github.com/TJUSSE/sseweb-subscription 和 https://github.com/TJUSSE/sseweb-login
 
 ```bash
 cd sites/default/modules/sse_subscription
+composer install
+cd -
+```
+
+```bash
+cd sites/default/modules/sse_login
 composer install
 cd -
 ```
@@ -136,6 +150,14 @@ tar xzf banners.tar.gz
 
 请在本地安装 ImageMagick 二进制，然后访问 `/admin/config/media/image-toolkit` 地址配置路径。
 
+## 邮件订阅
+
+如果需要使用邮件订阅，请参考 https://github.com/TJUSSE/sseweb-subscription
+
+## 教师账户登录
+
+如果需要使用同济大学统一认证登录，请参考 https://github.com/TJUSSE/sseweb-login
+
 ## 提出建议
 
 请在 [issue](https://github.com/TJUSSE/sseweb/issues) 中创建建议。
@@ -154,6 +176,7 @@ tar xzf banners.tar.gz
 - [devel](https://www.drupal.org/project/devel): 调试工具
 - [ds](https://www.drupal.org/project/ds): 控制字段显示
 - [entityreference](https://www.drupal.org/project/entityreference): 可引用的字段
+- [entity\_translation](https://www.drupal.org/project/entity_translation): 翻译实体
 - [expire](https://www.drupal.org/project/expire): 自动过期缓存
 - [field\_group](https://www.drupal.org/project/field_group): 对字段分组
 - [filefield\_sources](https://www.drupal.com/project/filefield_sources): 集成 IMCE 到内置字段
@@ -169,7 +192,7 @@ tar xzf banners.tar.gz
 - [menu\_fields](https://www.drupal.org/project/menu_fields): 允许菜单项中增加字段
 - [menu\_force](https://www.drupal.org/project/menu_force): 强制勾选「使用菜单」
 - [module\_filter](https://www.drupal.org/project/module_filter): 在模块页面提供筛选功能
-- [node_save_redirect](https://www.drupal.org/project/node_save_redirect): 保存节点重定向
+- [node\_save\_redirect](https://www.drupal.org/project/node_save_redirect): 保存节点重定向
 - [panels](https://www.drupal.org/project/panels): 自由布局
 - [pathauto](https://www.drupal.org/project/pathauto): 自动按规则生成 URI alias
 - [rabbit\_hole](https://www.drupal.org/project/rabbit_hole): 控制节点 / Taxonomy 的可访问性 / 重定向

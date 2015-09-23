@@ -22,3 +22,6 @@
 [submodule "sites/default/modules/sse_subscription"]
 	path = sites/default/modules/sse_subscription
 	url = https://github.com/TJUSSE/sseweb-subscription
+[submodule "sites/default/modules/sse_login"]
+	path = sites/default/modules/sse_login
+	url = https://github.com/TJUSSE/sseweb-login
