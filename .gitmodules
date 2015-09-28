@@ -25,3 +25,6 @@
 [submodule "sites/default/modules/sse_login"]
 	path = sites/default/modules/sse_login
 	url = https://github.com/TJUSSE/sseweb-login
+[submodule "sites/default/modules/sse_noticefilter"]
+	path = sites/default/modules/sse_noticefilter
+	url = https://github.com/TJUSSE/sseweb-noticefilter
