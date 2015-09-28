@@ -105,7 +105,7 @@ cd -
 
 ```bash
 cd sites/default/themes/sse
-npm install  # 如果安装了 cnpm，则使用 cnpm install
+cnpm install --unsafe-perm
 gulp
 # 以下是下载 banner images
 cd img/banners
