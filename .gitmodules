@@ -1,24 +1,24 @@
-[submodule "sites/default/themes/sse"]
-  path = sites/default/themes/sse
-  url = https://github.com/TJUSSE/sseweb-theme
-[submodule "sites/default/modules/ssetaxonomy"]
-	path = sites/default/modules/sse_taxonomy
-  url = https://github.com/TJUSSE/sseweb-fixtaxonomy
-[submodule "sites/default/modules/ssemark"]
-	path = sites/default/modules/sse_mark
-	url = https://github.com/TJUSSE/sseweb-mark
-[submodule "sites/default/modules/sseadmintype"]
-	path = sites/default/modules/sse_admintype
-	url = https://github.com/TJUSSE/sseweb-admin-type
-[submodule "sites/default/modules/ssecontactfield"]
-	path = sites/default/modules/sse_contactfield
-	url = https://github.com/TJUSSE/sseweb-contactfield
 [submodule "sites/default/libraries/ckeditor"]
   path = sites/default/libraries/ckeditor
   url = https://github.com/TJUSSE/sseweb-ckeditor
 [submodule "profiles/sseweb"]
   path = profiles/sseweb
   url = https://github.com/TJUSSE/sseweb-profile
+[submodule "sites/default/themes/sse"]
+  path = sites/default/themes/sse
+  url = https://github.com/TJUSSE/sseweb-theme
+[submodule "sites/default/modules/sse_taxonomy"]
+	path = sites/default/modules/sse_taxonomy
+  url = https://github.com/TJUSSE/sseweb-fixtaxonomy
+[submodule "sites/default/modules/sse_mark"]
+	path = sites/default/modules/sse_mark
+	url = https://github.com/TJUSSE/sseweb-mark
+[submodule "sites/default/modules/sse_admintype"]
+	path = sites/default/modules/sse_admintype
+	url = https://github.com/TJUSSE/sseweb-admintype
+[submodule "sites/default/modules/sse_contactfield"]
+	path = sites/default/modules/sse_contactfield
+	url = https://github.com/TJUSSE/sseweb-contactfield
 [submodule "sites/default/modules/sse_subscription"]
 	path = sites/default/modules/sse_subscription
 	url = https://github.com/TJUSSE/sseweb-subscription
