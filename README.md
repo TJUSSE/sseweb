@@ -162,6 +162,12 @@ tar xzf banners.tar.gz
 
 请在 [issue](https://github.com/TJUSSE/sseweb/issues) 中创建建议。
 
+## Troubleshooting
+
+1. 安装完 Drupal 后出现错误 `Notice: Undefined index: name in block_menu()`：
+  
+  一般是因为 `sites/default/themes/sse/node_modules` 下的 `.info` 文件没有删除
+
 ## 插件说明
 
 - [admin\_views](https://www.drupal.org/project/admin_views): 提供更好的管理界面
