@@ -36,6 +36,7 @@ git submodule update --init --recursive
 ```bash
 # cd sseweb
 drush dl \
+title stringoverrides \
 node_save_redirect \
 ds login_destination \
 boost expire \
