@@ -28,3 +28,6 @@
 [submodule "sites/default/modules/sse_noticefilter"]
 	path = sites/default/modules/sse_noticefilter
 	url = https://github.com/TJUSSE/sseweb-noticefilter
+[submodule "sites/default/modules/sse_util"]
+	path = sites/default/modules/sse_util
+	url = https://github.com/TJUSSE/sseweb-util
