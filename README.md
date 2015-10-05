@@ -102,10 +102,10 @@ cd -
 
 ### 6. 编译 SSE 主题
 
-具体参见 https://github.com/TJUSSE/ssetheme/tree/0.0.2
+具体参见 https://github.com/TJUSSE/sseweb-theme/tree/0.0.2
 
 ```bash
-cd sites/default/themes/sse
+cd sites/default/themes/sse_theme
 cnpm install --unsafe-perm
 gulp
 # 以下是下载 banner images
@@ -133,7 +133,7 @@ tar xzf banners.tar.gz
 
 2. 访问相应地址，如 `http://ssedev.tongji.edu.cn`。
 
-3. 选择「SSE」作为 profile 安装。只需要设定数据库链接，并填写初始账户信息即可，其他字段使用默认参数不需要修改。
+3. 选择「软件学院网站」作为 profile 安装。只需要设定数据库链接，并填写初始账户信息即可，其他字段使用默认参数不需要修改。
 
 ### 8. 导入基础数据库镜像
 
@@ -167,7 +167,7 @@ tar xzf banners.tar.gz
 
 1. 安装完 Drupal 后出现错误 `Notice: Undefined index: name in block_menu()`：
   
-  一般是因为 `sites/default/themes/sse/node_modules` 下的 `.info` 文件没有删除
+  一般是因为 `sites/default/themes/sse_theme/node_modules` 下的 `.info` 文件没有删除
 
 ## 插件说明
 
