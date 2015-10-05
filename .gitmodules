@@ -1,8 +1,8 @@
 [submodule "sites/default/libraries/ckeditor"]
   path = sites/default/libraries/ckeditor
   url = https://github.com/TJUSSE/sseweb-ckeditor
-[submodule "profiles/sseweb"]
-  path = profiles/sseweb
+[submodule "profiles/sse_profile"]
+	path = profiles/sse_profile
   url = https://github.com/TJUSSE/sseweb-profile
 [submodule "sites/default/themes/sse_theme"]
 	path = sites/default/themes/sse_theme
