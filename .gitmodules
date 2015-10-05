@@ -4,8 +4,8 @@
 [submodule "profiles/sseweb"]
   path = profiles/sseweb
   url = https://github.com/TJUSSE/sseweb-profile
-[submodule "sites/default/themes/sse"]
-  path = sites/default/themes/sse
+[submodule "sites/default/themes/sse_theme"]
+	path = sites/default/themes/sse_theme
   url = https://github.com/TJUSSE/sseweb-theme
 [submodule "sites/default/modules/sse_taxonomy"]
 	path = sites/default/modules/sse_taxonomy
