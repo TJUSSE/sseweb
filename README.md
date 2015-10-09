@@ -36,7 +36,7 @@ git submodule update --init --recursive
 ```bash
 # cd sseweb
 drush dl \
-title stringoverrides \
+file_entity title stringoverrides \
 node_save_redirect \
 ds login_destination \
 boost expire \
@@ -49,7 +49,6 @@ module_filter admin_views views_bulk_operations \
 ckeditor_blocks-7.x-1.x-dev insert_block \
 imagemagick devel globalredirect \
 entity_translation i18n variable \
-rabbit_hole date \
 backup_migrate jquery_update ctools \
 pathauto token panels ckeditor views \
 term_reference_tree menu_fields zen \
@@ -186,6 +185,7 @@ tar xzf banners.tar.gz
 - [entity\_translation](https://www.drupal.org/project/entity_translation): 翻译实体
 - [expire](https://www.drupal.org/project/expire): 自动过期缓存
 - [field\_group](https://www.drupal.org/project/field_group): 对字段分组
+- [file\_entity](https://www.drupal.org/project/file_entity): File as entities
 - [filefield\_sources](https://www.drupal.com/project/filefield_sources): 集成 IMCE 到内置字段
 - [globalredirect](https://www.drupal.org/project/globalredirect): `node/xx` 重定向到其 alias 等
 - [i18n](https://www.drupal.org/project/i18n): 国际化，为内容编写中英文版本
