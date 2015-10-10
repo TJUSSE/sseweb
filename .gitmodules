@@ -34,3 +34,6 @@
 [submodule "sites/default/modules/sse_themehelper"]
 	path = sites/default/modules/sse_themehelper
 	url = https://github.com/TJUSSE/sseweb-themehelper
+[submodule "sites/default/modules/sse_fff"]
+	path = sites/default/modules/sse_fff
+	url = https://github.com/TJUSSE/sseweb-fff
