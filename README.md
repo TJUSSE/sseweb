@@ -108,13 +108,28 @@ cd -
 cd sites/default/themes/sse_theme
 cnpm install --unsafe-perm
 gulp
+cd -
 # 以下是下载 banner images
-cd img/banners
+cd sites/default/themes/sse_theme/img/banners
 wget http://cdug.tongji.edu.cn/sse/banners.tar.gz
 tar xzf banners.tar.gz
+/bin/rm banners.tar.gz
+cd -
 ```
 
-### 7. 初始化网站
+### 7. 添加自带附件
+
+基础数据库镜像中包含一些附件，如图片等。如果您希望添加，请执行如下命令：
+
+```bash
+cd sites/default/files
+wget http://cdug.tongji.edu.cn/sse/files.tar.gz
+tar xzf files.tar.gz
+/bin/rm files.tar.gz
+cd -
+```
+
+### 8. 初始化网站
 
 1. 在初始化之前，您可能还需要配置 Apache 指向 Drupal 目录，例如：
 
@@ -135,7 +150,7 @@ tar xzf banners.tar.gz
 
 3. 选择「软件学院网站」作为 profile 安装。只需要设定数据库链接，并填写初始账户信息即可，其他字段使用默认参数不需要修改。
 
-### 8. 导入基础数据库镜像
+### 9. 导入基础数据库镜像
 
 数据库中包含了设置、菜单项、节点项等信息。该数据库是调试数据库，不包含线上数据。
 
@@ -145,7 +160,7 @@ tar xzf banners.tar.gz
 
 3. 点击 「Restore Now」。
 
-### 9. 配置 ImageMagick
+### 10. 配置 ImageMagick
 
 网站使用了 ImageMagick 来处理上传的图片。
 
