@@ -50,6 +50,7 @@ module_filter admin_views views_bulk_operations \
 ckeditor_blocks-7.x-1.x-dev insert_block \
 imagemagick devel globalredirect \
 entity_translation i18n variable \
+rabbit_hole date \
 backup_migrate jquery_update ctools \
 pathauto token panels ckeditor views \
 term_reference_tree menu_fields zen \
