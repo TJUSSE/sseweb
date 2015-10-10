@@ -2,9 +2,9 @@
 sites/*/*settings*.php
 
 # Ignore paths that contain generated content.
-files/
-sites/*/files
-sites/*/private
+files/*
+sites/*/files/*
+sites/*/private/*
 sites/all
 sites/README.txt
 sites/example.sites.php
@@ -39,3 +39,5 @@ xmlrpc.php
 /profiles
 /scripts
 /themes
+
+!.gitkeep
