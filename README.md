@@ -44,6 +44,7 @@ workbench workbench_moderation \
 linkit entityreference \
 advanced_help image_url_formatter \
 filefield_sources imce menu_force \
+imce_mkdir imce_plupload plupload \
 conditional_fields field_group link \
 module_filter admin_views views_bulk_operations \
 ckeditor_blocks-7.x-1.x-dev insert_block \

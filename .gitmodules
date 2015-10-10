@@ -37,3 +37,9 @@
 [submodule "sites/default/modules/sse_fff"]
 	path = sites/default/modules/sse_fff
 	url = https://github.com/TJUSSE/sseweb-fff
+[submodule "sites/default/libraries/plupload"]
+	path = sites/default/libraries/plupload
+	url = https://github.com/TJUSSE/sseweb-plupload
+[submodule "sites/default/modules/sse_disable_node_page"]
+	path = sites/default/modules/sse_disable_node_page
+	url = https://github.com/TJUSSE/sseweb-disable-node-page
