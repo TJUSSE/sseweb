@@ -43,3 +43,6 @@
 [submodule "sites/default/modules/sse_disable_node_page"]
 	path = sites/default/modules/sse_disable_node_page
 	url = https://github.com/TJUSSE/sseweb-disable-node-page
+[submodule "sites/default/modules/sse_video_filter"]
+	path = sites/default/modules/sse_video_filter
+	url = https://github.com/TJUSSE/sseweb-video-filter

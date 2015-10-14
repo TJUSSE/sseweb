@@ -36,6 +36,7 @@ git submodule update --init --recursive
 ```bash
 # cd sseweb
 drush dl \
+node_export uuid \
 file_entity title stringoverrides \
 node_save_redirect \
 ds login_destination \
@@ -84,6 +85,13 @@ entity libraries l10n_update
   # cd sseweb
   patch sites/all/modules/entity/includes/entity.property.inc < patches/entity.property.inc.patch
   ```
+
+4. 修复 node_export 批量导出问题
+
+   ```bash
+   # cd sseweb
+   patch sites/all/modules/node_export/node_export.module < patches/node_export.module.patch
+   ```
 
 ### 5. 为 SSE 订阅插件和 SSE 登录插件安装第三方库
 
@@ -216,6 +224,7 @@ cd -
 - [menu\_fields](https://www.drupal.org/project/menu_fields): 允许菜单项中增加字段
 - [menu\_force](https://www.drupal.org/project/menu_force): 强制勾选「使用菜单」
 - [module\_filter](https://www.drupal.org/project/module_filter): 在模块页面提供筛选功能
+- [node\_export](https://www.drupal.org/project/node_export): 导出节点
 - [node\_save\_redirect](https://www.drupal.org/project/node_save_redirect): 保存节点重定向
 - [panels](https://www.drupal.org/project/panels): 自由布局
 - [pathauto](https://www.drupal.org/project/pathauto): 自动按规则生成 URI alias
