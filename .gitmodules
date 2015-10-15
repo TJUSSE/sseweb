@@ -46,3 +46,6 @@
 [submodule "sites/default/modules/sse_video_filter"]
 	path = sites/default/modules/sse_video_filter
 	url = https://github.com/TJUSSE/sseweb-video-filter
+[submodule "sites/default/modules/sse_gmap_filter"]
+	path = sites/default/modules/sse_gmap_filter
+	url = https://github.com/TJUSSE/sseweb-gmap-filter
