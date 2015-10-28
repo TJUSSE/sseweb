@@ -193,6 +193,21 @@ cd -
   
   一般是因为 `sites/default/themes/sse_theme/node_modules` 下的 `.info` 文件没有删除
 
+2. 使用 Drupal 执行完更新后出现错误 `Notice: Undefined index: .... in .... system.install).`
+
+  一般是因为 SSE Profile 被 drush 奇妙地禁用了。请执行以下 SQL 命令：
+  
+  ```sql
+  UPDATE system SET status = 1 WHERE filename="profiles/sseweb/sseweb.profile"
+  ```
+  
+  再清空缓存：
+  
+  ```
+  # cd sseweb
+  drush cc all
+  ```
+
 ## 升级 Drupal Core
 
 如果有新的 Drupal 内核更新，您可以通过以下命令升级：
@@ -202,6 +217,8 @@ cd -
 drush pm-update
 git checkout -- .gitignore   # 恢复本项目的 .gitignore 文件
 ```
+
+若升级后，访问网站出现 Notice 错误，见 Troubleshooting #2。
 
 ## 升级 Repository
 
