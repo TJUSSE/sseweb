@@ -193,6 +193,26 @@ cd -
   
   一般是因为 `sites/default/themes/sse_theme/node_modules` 下的 `.info` 文件没有删除
 
+## 升级 Drupal Core
+
+如果有新的 Drupal 内核更新，您可以通过以下命令升级：
+
+```bash
+# cd sseweb
+drush pm-update
+git checkout -- .gitignore   # 恢复本项目的 .gitignore 文件
+```
+
+## 升级 Repository
+
+如果该项目库有更新，您希望将更新应用到当前部署：
+
+```bash
+# cd sseweb
+git pull
+git submodule update
+```
+
 ## 插件说明
 
 - [admin\_views](https://www.drupal.org/project/admin_views): 提供更好的管理界面

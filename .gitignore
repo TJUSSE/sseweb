@@ -9,6 +9,7 @@ sites/all
 sites/README.txt
 sites/example.sites.php
 
+import/
 cache/
 
 # Ignore default text files
